@@ -78,74 +78,6 @@
             <span class="author-block"><sup>2</sup>Clova AI, NAVER</span>
             <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
           </div>
-
-          <div class="column has-text-centered">
-            <div class="publication-links">
-              <span class="link-block">
-                <a href="https://ieeexplore.ieee.org/document/9790354" target="_blank"
-                class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span>
-              
-              <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=52Rqxs6682A" target="_blank"
-                class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span>
-                      
-              <!-- Arxiv PDF link 
-              <span class="link-block">
-                <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span> -->
-
-              <!-- Supplementary PDF link 
-              <span class="link-block">
-                <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Supplementary</span>
-                </a>
-              </span> -->
-  
-              <!-- Github link 
-              <span class="link-block">
-                <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
-                </a>
-              </span> -->
-  
-              <!-- ArXiv abstract Link 
-              <span class="link-block">
-                <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span> -->
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -212,39 +144,14 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            In this letter, we address the 3D link segmentation problem of articulated objects using multiple point sets with different configurations.
+            We propose a novel unsupervised method for motion-based 3D part decomposition of articulated objects with a single monocular video.
+            In contrast to existing unsupervised methods relying on optical flow or tracking techniques, our approach addresses this problem without 
+            additional information by leveraging Neural Radiance Fields (NeRF) techniques.
+            For training NeRF on dynamic scenes which consist of articulated objects, we design a mapping function suitable for the movement of articulated objects. 
+            To effectively capture complex movements of articulated objects, we incorporate a 3D reconstruction loss using the sequence of 3D occupied voxel maps for the entire scene.
+            Experimental results demonstrate that our method outperforms existing approaches in terms of 3D part decomposition for articulated objects. 
+            In addition, we demonstrate that our method effectively tackles the task which decomposes 3D parts of novel-posed articulated objects. 
           </p>
-          <p>
-            We are motivated by the fact that a point set
-            of an object can be aligned to point sets with different configurations
-            by applying rigid transformations to links. Since existing 3D part
-            segmentation datasets do not provide motion-based annotations,
-            we propose a novel dataset of articulated objects, which are annotated based on its kinematic models. 
-            We define the point set
-            alignment process as a probability density estimation problem and
-            find the optimal decomposition of the point set and deformations
-            using the EM algorithm. In addition, to improve the segmentation
-            performance, we propose a regularization loss designed with a
-            physical prior of decomposition. We evaluate the proposed method
-            on our dataset, demonstrating that the proposed method achieves
-            the state-of-the-art performance compared to baseline methods.
-          </p>
-          <p>
-            Finally, we also propose an effective target manipulating point
-            proposer, which can be applied to collect multiple point sets from
-            an unknown object with different configurations to better solve the
-            3D link segmentation problem.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/52Rqxs6682A?si=xiQeNcgmw-0kqDd2"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
     </div>
