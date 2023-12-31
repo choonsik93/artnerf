@@ -225,9 +225,6 @@
     <div class="column">
       <div class="content">
         <h2 class="title is-3">Articulated Deformation Modeling</h2>
-        <p>
-        The KinArt3D dataset offers annotations for part segmentation at both the instance and motion levels, covering 92 distinct models across eight articulated object categories.
-        </p>
       </div>
     </div>
   </div>
@@ -236,7 +233,9 @@
       <div class="content">
         <h3 class="title is-4">Articulated Mapping Function</h3>
         <p>
-        Using the kinematic model of each object, it is possible to generate various poses for articulated objects.  
+        Unlike general dynamic NeRF methods assuming non-rigid motions, 
+        we design the mapping function considering the properties of pose changes of articulated objects, 
+        where the distances between locations belonging to the same part always remain constant.
         </p>
         <img src="static/images/mapping_function.png">
       </div>
