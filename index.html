@@ -143,7 +143,7 @@
     </div>
     <div class="hero-body">
       <h2 class="subtitle has-text-centered">
-        Our method unsupervisedly infers the 3D parts of articulated objects from monocular videos, leveraging NeRF models.
+        Our method unsupervisedly infers the 3D parts of articulated objects from monocular videos by using Gaussian Splatting methods.
       </h2>
     </div>
   </div>
@@ -157,13 +157,12 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We propose a novel unsupervised method for motion-based 3D part decomposition of articulated objects with a single monocular video.
-            In contrast to existing unsupervised methods relying on optical flow or tracking techniques, our approach addresses this problem without 
-            additional information by leveraging Neural Radiance Fields (NeRF) techniques.
-            For training NeRF on dynamic scenes which consist of articulated objects, we design a mapping function suitable for the movement of articulated objects. 
-            To effectively capture complex movements of articulated objects, we incorporate a 3D reconstruction loss using the sequence of 3D occupied voxel maps for the entire scene.
-            Experimental results demonstrate that our method outperforms existing approaches in terms of 3D part decomposition for articulated objects. 
-            In addition, we demonstrate that our method effectively tackles the task which decomposes 3D parts of novel-posed articulated objects. 
+            We propose a novel unsupervised method for motion-based 3D part decomposition of articulated objects with a single monocular video of a dynamic scene.
+            In contrast to existing unsupervised methods relying on optical flow or tracking techniques, our approach addresses this problem without additional information by leveraging Gaussian splatting techniques.
+            We generate a series of Gaussians from a monocular video and then analyze the relationship between the Gaussians to decompose the dynamic scene into motion-based parts.
+            To decompose dynamic scenes consisting of articulated objects, we design an articulated deformation field suitable for the movement of articulated objects. 
+            And to effectively understand the relationships of Gaussians of different shapes, we propose a 3D reconstruction loss using 3D occupied voxel maps generated from the Gaussians.
+            Experimental results demonstrate that our method outperforms existing approaches in terms of 3D part decomposition for articulated objects and demonstrates competitive image synthesis performance. 
           </p>
         </div>
       </div>
